@@ -87,12 +87,12 @@ body {
 
 .head_image {
   height: 16px;
-  transition: transform 0.3ms;
+  transition: transform .3s;
+}
 
-  &_image:hover {
+.head_image:hover {
     transform: scale(1.2);
   }
-}
 
 @media (min-width: 576px) {
   .head_image {
@@ -146,7 +146,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: all .5s;
   opacity: 0;
   transform: translate(-100%);
   pointer-events: none;
@@ -156,6 +156,10 @@ body {
   opacity: 1;
   transform: translate(0);
   pointer-events: all;
+}
+
+.page:has(.page__menu:target) {
+  overflow: hidden
 }
 
 .top-bar {
@@ -232,7 +236,7 @@ body {
   height: 1px;
   bottom: -8px;
   background-color: #1b2129;
-  transition: transform 0.3s;
+  transition: transform .3s;
   transform: scale(0);
   transform-origin: left;
 }
@@ -278,7 +282,7 @@ body {
   }
 }
 
-.recommenden__products {
+.recommended__products {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -288,14 +292,14 @@ body {
 }
 
 @media (min-width: 576px) {
-  .recommenden__products {
+  .recommended__products {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 24px;
   }
 }
 
 @media (min-width: 1024px) {
-  .recommenden__products {
+  .recommended__products {
     grid-template-columns: repeat(12, 1fr);
   }
 }
