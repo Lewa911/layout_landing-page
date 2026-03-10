@@ -133,6 +133,26 @@ body {
   background-image: url(../img/Icon-Burger-menu.png);
 }
 
+@media(min-width: 1024px) {
+  .icon--phone::after {
+    content:"+1 234 5555-55-55";
+    position: absolute;
+    left: -105px;
+    bottom: 5px;
+    color: #1b2129;
+    display: block;
+    transform: scale(0);
+    transition: transform .3s;
+    transform-origin: right;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .icon--phone:hover::after {
+    transform: scale(1)
+  }
+}
+
 .icon--menu:hover {
   background-image: url(../img/Icon-Burger-menu-hover.png);
 }
@@ -447,11 +467,11 @@ body {
 }
 
 .category__link {
-  transition: transform 0.3s;
+  transition: transform .3s;
 }
 
 .category__link:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 .category__title {
