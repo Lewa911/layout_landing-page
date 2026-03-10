@@ -230,7 +230,7 @@ body {
 
 .nav__link::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
@@ -241,7 +241,7 @@ body {
   transform-origin: left;
 }
 
-.nav__link::after:hover {
+.nav__link:hover::after {
   transform: scale(1);
 }
 
