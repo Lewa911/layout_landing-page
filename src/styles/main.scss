@@ -87,12 +87,12 @@ body {
 
 .head_image {
   height: 16px;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .head_image:hover {
-    transform: scale(1.2);
-  }
+  transform: scale(1.2);
+}
 
 @media (min-width: 576px) {
   .head_image {
@@ -133,23 +133,23 @@ body {
   background-image: url(../img/Icon-Burger-menu.png);
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .icon--phone::after {
-    content:"+1 234 5555-55-55";
+    content: '+1 234 5555-55-55';
     position: absolute;
     left: -105px;
     bottom: 5px;
     color: #1b2129;
     display: block;
     transform: scale(0);
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform-origin: right;
     font-size: 12px;
     font-weight: 700;
   }
 
   .icon--phone:hover::after {
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
@@ -166,7 +166,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   opacity: 0;
   transform: translate(-100%);
   pointer-events: none;
@@ -179,11 +179,11 @@ body {
 }
 
 .page:has(.page__menu:target) {
-  overflow: hidden
+  overflow: hidden;
 }
 
 .top-bar {
-  padding-block: 24px;
+  padding-block: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,13 +250,13 @@ body {
 
 .nav__link::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 1px;
   bottom: -8px;
   background-color: #1b2129;
-  transition: transform .3s;
+  transition: transform 0.3s;
   transform: scale(0);
   transform-origin: left;
 }
@@ -449,9 +449,22 @@ body {
 }
 
 .category__photo {
-  height: 100%;
+  inset: 0;
+  height: 130px;
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 576px) {
+  .category__photo {
+    height: 184px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category__photo {
+    height: 324px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -467,7 +480,7 @@ body {
 }
 
 .category__link {
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .category__link:hover {
@@ -650,7 +663,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   padding: 14px 16px;
-  border: none;
+  border: 1px solid #f9f9f9;
   border-radius: 8px;
   background-color: #f9f9f9;
   font-size: 16px;
@@ -739,4 +752,8 @@ body {
 .contact-us__link {
   color: #191919;
   text-decoration: none;
+}
+
+.contact-us__link:hover {
+  transform: scale(1.5);
 }
